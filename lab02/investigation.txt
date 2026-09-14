@@ -1,0 +1,9 @@
+codespace
+codespaces-eb9b97
+/workspaces/scripting-for-cybersecurity/lab02
+/bin/bash
+/home/codespace
+/home/codespace/.python/current/bin/python3
+/usr/bin/bash
+86
+7
