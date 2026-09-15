@@ -5,3 +5,4 @@ This repository contains practical work for labs for the scripting module of set
 ## Labs
 
 - Lab 01 - Development Environment (github codespace)
+- Lab 02 - Linux Command Line
