@@ -1,0 +1,110 @@
+    1  ls 
+    2  cd lab03
+    3  ls
+    4  cat auth-report.txt 
+    5  echo >> auth-report.txt 
+    6  grep "Failed password" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}'
+    7  grep "Failed password" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}' | sort | uniq -c
+    8  grep "Failed password" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}' | sort | uniq -c | sort -nr
+    9  grep "Failed password" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}' | sort | uniq -c | sort -nr
+   10  grep "Failed" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}' | sort | uniq -c | sort -nr
+   11  grep "Failed password" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}' | sort | uniq -c | sort -nr >> auth-report.txt 
+   12  cat auth-report.txt 
+   13  echo Web Access Analysis > web-report.txt
+   14  ls
+   15  cd lab03-data/
+   16  ls
+   17  cd ..
+   18  grep "Failed password" ./lab03-data/auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}' | sort | uniq -c | sort -nr >> auth-report.txt 
+   19  cat auth-report.txt 
+   20  nano auth-report.txt 
+   21  echo >> web-report.txt 
+   22  cat access.log 
+   23  echo Total Requests:  $(wc -l > access.log) >> web-report.txt 
+   24  echo Total Requests: $(wc -l < access.log) >> web-report.txt 
+   25  cat access.log 
+   26  cat web-report.txt 
+   27  cat access.log 
+   28  cat ./lab03-data/access.log 
+   29  cp ./lab03-data/access.log ./
+   30  cat access.log 
+   31  echo Total Requests: $(wc -l < access.log) >> web-report.txt 
+   32  nano web-report.txt 
+   33  echo 403 Responses: $(grep 403 access.log | wc -l) >> web-report.txt 
+   34  cat access.log 
+   35  cat web-report.txt 
+   36  echo 404 Responses: $(grep 404 access.log | wc -l) >> web-report.txt 
+   37  echo Requests to /admin: $(grep /admin access.log | wc -l) >> web-report.txt 
+   38  echo Requests to /.env: $(grep /.env access.log | wc -l) >> web-report.txt 
+   39  cat web-report.txt 
+   40  echo sqlmap Requests: $(grep sqlmap access.log | wc -l) >> web-report.txt 
+   41  cat web-report.txt 
+   42  cut -d' ' -f1 access.log 
+   43  cut -d' ' -f1 access.log | sort | uniq -c 
+   44  cut -d' ' -f1 access.log | sort | uniq -c | sort -nr 
+   45  echo >> web-report.txt && echo Top Source IPs: $(cut -d' ' -f1 access.log | sort | uniq -c | sort -nr) >> web-report.txt 
+   46  cat web-report.txt 
+   47  nano web-report.txt 
+   48  cat access.log 
+   49  cat auth-log
+   50  cat auth-report.txt 
+   51  touch investigation.txt
+   52  cat auth.log | head
+   53  echo 1. $(grep "Failed password" auth.log |
+awk '{for(i=1;i<=NF;i++) if($i=="for") print $(i+1)}' |
+sort |
+uniq -c |
+sort -nr | head -1) >> investigation.txt 
+   54  cat investigation.txt 
+   55  echo 1. $(grep "Failed password" auth.log |
+awk '{for(i=1;i<=NF;i++) if($i=="for") print $(i+1)}' |
+sort |
+uniq -c |
+sort -nr 
+   56  grep "Failed password" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="for") print $(i+1)}' | sort | uniq -c | sort -nr 
+   57  grep "Failed password" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}' | sort | uniq -c | sort -nr 
+   58  echo 1. $(grep "Failed password" auth.log |
+awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}' |
+sort |
+uniq -c |
+sort -nr | head -1) > investigation.txt 
+   59  cat investigation.txt 
+   60  echo 2. $(grep "Failed password" auth.log |
+awk '{for(i=1;i<=NF;i++) if($i=="for") print $(i+1)}' |
+sort |
+uniq -c |
+sort -nr | head -1) >> investigation.txt 
+   61  cat investigation.txt 
+   62  grep -oFf iocs.txt auth.log 
+   63  grep -oFf iocs.txt auth.log | sort
+   64  grep -oFf iocs.txt auth.log | sort | uniq
+   65  echo 3. $(grep -oFf iocs.txt auth.log | sort | uniq) >> investigation.txt 
+   66  cat investigation.txt 
+   67  access.log
+   68  cat access.log 
+   69  cut -d' ' -f1 access.log 
+   70  cut -d' ' -f1 access.log | sort | uniq -c | head -1
+   71  cut -d' ' -f1 access.log | sort | uniq -c 
+   72  cut -d' ' -f1 access.log | sort | uniq -c | sort -nr | head -1
+   73  echo 4. $(cut -d' ' -f1 access.log | sort | uniq -c | sort -nr | head -1) >> investigation.txt 
+   74  cat investigation.txt 
+   75  cat access.log more
+   76  cat access.log | more
+   77  grep 203.0.113.10 access.log | more
+   78  grep 203.0.113.200 access.log | more
+   79  cat investigation.txt 
+   80  grep 198.51.100.24 access.log | more
+   81  ls
+   82  cat auth.log | more
+   83  nano investigation.txt 
+   84  cat auth.log | more
+   85  cat access.log | more
+   86  nano investigation.txt 
+   87  cat access.log | grep sqlmap | sort 
+   88  cat access.log | grep sqlmap | sort | grep -fF iocs.txt 
+   89  grep -fF iocs.txt access.log 
+   90  grep -Ff iocs.txt access.log 
+   91  grep -Ff iocs.txt access.log | grep sqlmap
+   92  grep -Ff iocs.txt access.log | grep sqlmap | sort
+   93  nano investigation.txt 
+   94  history >> history.txt

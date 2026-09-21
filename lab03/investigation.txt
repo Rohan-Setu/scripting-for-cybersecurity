@@ -1,0 +1,6 @@
+1. 51 203.0.113.10
+2. 39 admin
+3. 198.51.100.24 203.0.113.10 203.0.113.200
+4. 62 203.0.113.10
+5. many requests of sqlmap which is an automated exploit tool which scans for vulnerabilities
+6. "grep -Ff iocs.txt access.log | grep sqlmap | sort" showing use of the automated sqlmap tool from iocs ips
