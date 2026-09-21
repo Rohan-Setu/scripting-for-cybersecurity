@@ -1,0 +1,39 @@
+    1  ls
+    2  ls lab04/lab04-data/
+    3  ls Scripting_Module/week\ 3/lab04-data/
+    4  rm -r $(ls Scripting_Module/week\ 3/lab04-data/)
+    5  ls
+    6  ls lab04
+    7  rm -r lab04/lab04-data/
+    8  cp -r Scripting_Module/week\ 3/lab04-data/* lab04/
+    9  cd lab04/
+   10  ls
+   11  pwd
+   12  find .
+   13  find . -type d
+   14  find . -type f
+   15  find . -type d | wc -l
+   16  find . -type d 
+   17  find . -type f | wc -l
+   18  man ls
+   19* 
+   20  find . -type d
+   21  man find
+   22  find . -maxdepth 0
+   23  find . -maxdepth 1
+   24  find . -maxdepth 1 -type d
+   25  ls
+   26  find . -maxdepth 1 -type d | wc -l
+   27  find ./ -maxdepth 1 -type d | wc -l
+   28  find ./ -maxdepth 1 -type d
+   29  ls scripts/*.py
+   30  find *.py
+   31  find .py
+   32  find py
+   33  find . -name "*.py"
+   34  ls logs/*.log
+   35  find . -name "*.conf"
+   36  find ./evidence/ -name "*.conf"
+   37  ls ./evidence/*.txt
+   38  ls config*
+   39  history >> history.txt
