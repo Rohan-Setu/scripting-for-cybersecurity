@@ -1,0 +1,7 @@
+Labs 3 and 4 Revision Report
+
+Authentication Log Entries: 60 ./lab04/logs/auth.log 184 ./lab03/auth.log 244 total
+Failed Password Events: ./lab04/logs/auth.log:45 ./lab03/auth.log:124
+Accepted Password Events: ./lab04/logs/auth.log:15 ./lab03/auth.log:57
+Unique Failed Login IPs: 198.51.100.24 198.51.100.77 203.0.113.10 203.0.113.15 203.0.113.200
+Most Frequent Failed Login IPs: 66 203.0.113.10 51 198.51.100.24 23 198.51.100.77 15 203.0.113.200 14 203.0.113.15
