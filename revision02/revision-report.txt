@@ -5,3 +5,15 @@ Failed Password Events: ./lab04/logs/auth.log:45 ./lab03/auth.log:124
 Accepted Password Events: ./lab04/logs/auth.log:15 ./lab03/auth.log:57
 Unique Failed Login IPs: 198.51.100.24 198.51.100.77 203.0.113.10 203.0.113.15 203.0.113.200
 Most Frequent Failed Login IPs: 66 203.0.113.10 51 198.51.100.24 23 198.51.100.77 15 203.0.113.200 14 203.0.113.15
+
+Web Requests: 80 ./lab04/logs/access.log 220 ./lab03/access.log 300 total
+403 Responses: ./lab04/logs/access.log:15 ./lab03/access.log:34
+404 Responses: ./lab04/logs/access.log:11 ./lab03/access.log:37
+
+Lab 4 Files: 22
+Lab 4 Directories: 9
+Python Files: ./lab04/scripts/report.py ./lab04/scripts/scan.py
+Shell Scripts: ./lab04/scripts/check.sh
+Log Files: ./lab04/logs/firewall.log ./lab04/logs/auth.log ./lab04/logs/access.log ./lab04/nested/archive/old.log ./lab03/auth.log ./lab03/access.log
+Configuration Files: ./lab04/configs/app.conf ./lab04/configs/server.conf ./lab04/configs/backup.conf
+Empty Files: ./lab04/evidence/empty.bin

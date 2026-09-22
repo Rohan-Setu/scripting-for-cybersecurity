@@ -37,3 +37,230 @@
    37  ls ./evidence/*.txt
    38  ls config*
    39  history >> history.txt
+##forgot to append history
+    2  cat ./lab04/history.txt | tail
+    3  cat ./lab04/history.txt | tail -20
+    4  cd lab04
+    5  ls ./evidence/*.txt
+    6  man ls
+    7  find . -maxdepth 1 -not -type d
+    8  find . -maxdepth 1 -not -type d | grep ./conf*
+    9  find . -maxdepth 1 -not -type d | grep "./conf*"
+   10  find . -maxdepth 1 -not -type d | grep "./config*"
+   11  find -name "*.py"
+   12  find -iname "*.PY"
+   13  find . -type f -name "*.log"
+   14  find . -type f -name "conf*"
+   15  find . -type f -name "conf*" -maxdepth 1
+   16  find . -type f -maxdepth 1 -name "conf*"
+   17  find . -maxdepth 1-type f -name "conf*"
+   18  find . -maxdepth 1 -type f -name "conf*"
+   19  find -iname "*.py" 
+   20  find -iname "*.conf" 
+   21  find -iname "*.old" 
+   22  find -iname "*.log" 
+   23  find -iname "*config*" 
+   24  find -iname "*config*" -type f
+   25  find -iname "*.old" -f
+   26  find -iname "*.old" -type f
+   27  find -iname "*.log" -type f
+   28  find -iname "*.py" -type f
+   29  find evidence -type f
+   30  find scripts -type f
+   31  find evidence -type f | wc -l
+   32  find scripts -type f | wc -l
+   33  find nested -type f | wc -l
+   34  file evidence/*
+   35  file scripts/*
+   36  file /evidence/image.png > filereport.txt
+   37  file ./evidence/archive.zip > filereport.txt
+   38  file ./evidence/image.png > filereport.txt
+   39  file ./evidence/archive.zip >> filereport.txt
+   40  cat filereport.txt 
+   41  file ./evidence/empty.bin >> filereport.txt
+   42  file ./evidence/suspicious.dat >> filereport.txt
+   43  file ./scripts/check.sh >> filereport.txt
+   44  file ./scripts/scan.py >> filereport.txt
+   45  cat filereport.txt 
+   46  nano evidence/suspicious.dat 
+   47  man basename
+   48  basename "$(pwd)/scripts/scan.py"
+   49  man dirname
+   50  dirname "$(pwd)/scripts/scan.py"
+   51  dirname "$(pwd)/evidence/suspicious.dat"
+   52  basename "$(pwd)/evidence/suspicious.dat"
+   53  cat config-old.txt
+   54  cat config-new.txt 
+   55  grep -fF config-old.txt config-new.txt 
+   56  grep -Ff config-old.txt config-new.txt 
+   57  diff config-old.txt config-new.txt 
+   58  grep -Ffv config-old.txt config-new.txt 
+   59  grep -vFf config-old.txt config-new.txt 
+   60  grep -vFf config-old.txt config-new.txt && grep -vFf config-new.txt config-old.txt 
+   61  diff -u config-old.txt config-new.txt 
+   62  man diff
+   63  diff -u config-old.txt config-new.txt > config-changes.txt
+   64  cat config-changes.txt 
+   65  grep -r "admin"
+   66  grep -r admin
+   67  grep  admin
+   68  grep admin
+   69  grep admin .
+   70* 
+   71  grep-r block
+   72  grep -r block
+   73  grep -ri block
+   74  man grep
+   75  grep -rl admin
+   76  man grep
+   77  grep -rl admin
+   78  grep -r admin
+   79  grep -r BLOCK
+   80  grep -r 8080
+   81  grep -r Scanning
+   82  grep -r password123
+   83  cat evidence/passwords.txt 
+   84  find . -type f -size 0
+   85  find . -type f -size 0 | wc -l
+   86  find . -type f -size +0c
+   87  find . -type f -size 0 > empty.txt
+   88  find . -type f -size 0 | wc -l >> empty.txt 
+   89  find . -type f -size +0c | wc -l >> empty.txt 
+   90  nano empty.txt 
+   91  find . -type f -size 0 
+   92  cat empty.txt
+   93  nano empty.txt 
+   94  find . -type f -mmin 60
+   95  find . -type f -mmin 6000
+   96  find . -type f -mmin 600000
+   97  find . -type f -mmin 600000000
+   98  find . -type f -mmin 10
+   99  find . -type f -mmin 1
+  100  find . -type f -mmin 1440
+  101  find . -type f -mmin 1440000000
+  102  find . -type f -name "*.py" | wc -l
+  103  find . -type f -name "*.log" | wc -l
+  104  find . -type f -name "*.py" | wc -l
+  105  find . -type f -name "*.sh" | wc -l
+  106  find . -type f -name "*.log" | wc -l
+  107  find . -type f -name "*.txt" | wc -l
+  108  find . -type f -name "*.zip" | wc -l
+  109  find scripts -type f
+  110  find scripts -type f | xargs file
+  111* man xar
+  112  find scripts -type f
+  113* 
+  114  find configs -type f -name "*.conf" | xargs wc -l
+  115  find configs -type f -name "*.conf" 
+  116  wc -l configs/backup.conf 
+  117  nano configs/backup.conf 
+  118  find evidence -type f | xargs file 
+  119  find . -type f -name "*.log" 
+  120  find . -type f -name "*.log" | xargs wc -l
+  121  find . -type f -name "*.conf" | xargs cat
+  122  find . -type f -name "*.conf" 
+  123  find . -type f -name "*.conf" | cat
+  124  nano xargs
+  125  rm xargs
+  126  ls 
+  127  nano xargs
+  128  man xargs
+  129  find . -type f -print0
+  130  find . -type f -print0 | xargs -0 file
+  131  find . -type f | xargs -0 file
+  132  find . -type f -name "*.conf" | xargs greo "port"
+  133  find . -type f -name "*.conf" | xargs grep "port"
+  134  grep -r "port"
+  135  grep -r "port" configs
+  136  grep -r "port" logs
+  137  grep -r "port" configs
+  138  grep -r "port" ./*.conf
+  139  grep -r "port" *.conf
+  140* 
+  141  find . -type f -name "*.conf" | xargs grep "port"
+  142  find . -type f -name "*.logs" | xargs grep 203.0.113.10
+  143  find . -type f -name "*.logs" |
+  144  find . -type f -name "*.logs"
+  145  find . -type f -name "*.log"
+  146  find . -type f -name "*.log" | xargs grep 203.0.113.10
+  147  find . -type f | xargs grep admin
+  148  ls
+  149  cat empty.txt 
+  150  find . -type f | xargs grep debug
+  151  find . -type f | xargs grep -l debug
+  152  man unzip
+  153  unzip -l evidence/archive.zip 
+  154  find . -name "*.zip"
+  155  find . -name "*.zip" | xargs file
+  156* 
+  157  find . -name "*.zip" | xargs unzip -l
+  158  find . 
+  159  find . -type f | wc -l
+  160  find . -type d | wc -l
+  161  find . -name "*.sh" | wc -l
+  162  find . -name "*.sh"
+  163  ls scripts/
+  164  find . -name "*.py"
+  165  find . -name "*.log"
+  166  find . -name "*.conf"
+  167  find . -size 0
+  168  find . -name "*.zip"
+  169  find . -type f | xargs grep admin
+  170  find . -type f | xargs grep -l admin
+  171  find . -type f | xargs grep password
+  172* 
+  173  find . | xargs file
+  174  find . | xargs file | grep -v ASCII,ZIP
+  175  find . | xargs file | grep -v ASCII
+  176  find . | xargs file | grep -viE ASCII|ZIP|directory
+  177  find . | xargs file | grep -E ASCII|ZIP|directory
+  178  man grep
+  179  find . | xargs file | grep -e ASCII|ZIP|directory
+  180  touch triage-report.txt
+  181  echo File Triage Report > triage-report.txt && echo > triage-report.txt 
+  182  cat triage-report.txt 
+  183  echo File Triage Report > triage-report.txt && echo >> triage-report.txt 
+  184  cat triage-report.txt 
+  185  echo Total Files: $(find . -type f | wc -l)
+  186  echo Total Files: $(find . -type f | wc -l) >> triage-report.txt 
+  187  echo Total Files: $(find . -type d | wc -l) >> triage-report.txt 
+  188  nano triage-report.txt 
+  189  echo Python Files: $(find . -type f -name "*.py" | wc -l)  
+  190  echo Python Files: $(find . -type f -name "*.py" | wc -l)  >> triage-report.txt 
+  191  echo Shell Scripts: $(find . -type f -name "*.sh" | wc -l) 
+  192  echo Shell Scripts: $(find . -type f -name "*.sh" | wc -l) >> triage-report.txt 
+  193  echo Log Files: $(find . -type f -name "*.log" | wc -l) >> triage-report.txt 
+  194  echo Configuration Files: $(find . -type f -name "*.config" | wc -l) >> triage-report.txt 
+  195  echo Empty Files: $(find . -type f -size 0 | wc -l) >> triage-report.txt 
+  196  echo Archives: $(find . -type f -name "*.zip" | wc -l) >> triage-report.txt 
+  197  echo >> triage-report.txt 
+  198  cat triage-report.txt 
+  199  echo Files Containing "admin": $(find . | xargs grep admin 
+  200  echo Files Containing "admin": $(find .) | xargs grep admin 
+  201  echo Files Containing "admin": $(find . | xargs grep admin) 
+  202  echo Files Containing "admin": $(find . | xargs grep -l admin) 
+  203  echo Files Containing "admin": $(find . -type f | xargs grep -l admin) 
+  204  echo Files Containing "admin": $(find . -type f | xargs grep -l admin) >> triage-report.txt 
+  205  cat triage-report.txt 
+  206  echo >> triage-report.txt 
+  207  echo Detected File Types in Evidence: "admin": $(find evidence -type f | xargs file) 
+  208  echo Detected File Types in Evidence: "admin": $(find evidence -type f | xargs bashname) 
+  209  echo Detected File Types in Evidence: "admin": $(find evidence -type f | xargs basename) 
+  210  echo Detected File Types in Evidence: "admin": $(find evidence -type f )
+  211  echo Detected File Types in Evidence: "admin": $(find evidence -type f | basename)
+  212  echo Detected File Types in Evidence: "admin": $(find evidence -type f | xargs basename)
+  213  find evidence -type f
+  214  find evidence -type f | basename
+  215  basename | find evidence -type f
+  216  find evidence -type f | xargs basename
+  217  echo Detected File Types in Evidence: "admin": $(find evidence -type f )
+  218  echo Detected File Types in Evidence: "admin": $(find evidence -type f | cut -d'.' -f1)
+  219  echo Detected File Types in Evidence: "admin": $(find evidence -type f | cut -d'.' -f2)
+  220  echo Detected File Types in Evidence: "admin": $(find evidence -type f | cut -d'.' -f2 | sort | uniq)
+  221  echo Detected File Types in Evidence: "admin": $(find evidence -type f | cut -d'.' -f2 | sort | uniq) >> triage-report.txt 
+  222  cat triage-report.txt 
+  223  nano triage-report.txt 
+  224  echo Configuration Files: $(find . -type f -name "*.config" | wc -l)
+  225  echo Configuration Files: $(find . -type f -name "*.conf" | wc -l)
+  226  nano triage-report.txt 
+  227  cd ..
