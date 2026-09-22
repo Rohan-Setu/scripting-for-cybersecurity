@@ -1,0 +1,17 @@
+File Triage Report
+
+Total Files: 27
+Total Directories: 9
+Python Files: 2
+Shell Scripts: 1
+Log Files: 4
+Configuration Files: 3
+Empty Files: 1
+Archives: 1
+
+Files Containing admin: ./logs/auth.log ./logs/access.log ./backups/users.old ./evidence/notes.txt
+
+Detected File Types in Evidence: admin: bin dat md png txt zip
+
+
+##I was unsure if you required file counts or file names for the previous requests of python files, shell scripts etc. I also partially contaminated the data as I placed files such as empty.txt within the directory Lab04-data

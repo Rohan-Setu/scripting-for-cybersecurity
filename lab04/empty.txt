@@ -1,0 +1,7 @@
+./empty.txt
+./evidence/empty.bin
+1
+25
+
+
+./empty.txt was created by running "find . -type f -size 0 > empty.txt", it did not previously exist but the first command interracted with the 2nd, meaning they do not execute in exact sequence
