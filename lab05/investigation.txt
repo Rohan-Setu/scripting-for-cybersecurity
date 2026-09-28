@@ -1,0 +1,3 @@
+1. I think I included files in the current directory, which included files that I created before making the report for lab04 originally, so I have less now
+2. change CASE_DIR, I would of had to run run all the commands from a different directory or change the new case to have the same name as the old
+3. ELF, unknown class 154
