@@ -1,6 +1,7 @@
 #!/bin/bash
 
-AUTH_LOG="case/logs/auth.log"
+#AUTH_LOG="case/logs/auth.log"
+AUTH_LOG="$1"
 
 TOP_ATTACKERS=$(grep "Failed password" "$AUTH_LOG" |
     awk '{for(i=1;i<=NF;i++) if($i=="from") print $(i+1)}' |

@@ -1,0 +1,5 @@
+grep Failed Password ../lab03/auth.log)
+Total failed password events: 124
+Ip with the most failed attempts:      51 203.0.113.10
+Busiest source Ips: Top 3 failed-login sources: 51 203.0.113.10 37 198.51.100.24 15 198.51.100.77
+Top targeted usernames  39 admin 35 root 18 guest

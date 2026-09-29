@@ -1,0 +1,5 @@
+grep Failed Password case/logs/auth.log)
+Total failed password events: 45
+Ip with the most failed attempts:      15 203.0.113.10
+Busiest source Ips: Top 3 failed-login sources: 15 203.0.113.10 14 198.51.100.24 8 198.51.100.77
+Top targeted usernames  17 admin 10 root 7 guest

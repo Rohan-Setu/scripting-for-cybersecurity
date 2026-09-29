@@ -1,3 +1,20 @@
 File                      Lines   Failed logins   First timestamp   Last timestamp
 case/logs/auth.log        60      45              Sep 20 08:00:20   Sep 20 08:46:20
 ../lab03-data/auth.log    184     124             Sep 20 08:00:20   Sep 20 10:05:52
+
+case/logs/auth.log
+Ip with the most failed attempts:      15 203.0.113.10
+Busiest source Ips: Top 3 failed-login sources: 15 203.0.113.10 14 198.51.100.24 8 198.51.100.77
+
+../lab03/auth.log
+Ip with the most failed attempts:      51 203.0.113.10
+Busiest source Ips: Top 3 failed-login sources: 51 203.0.113.10 37 198.51.100.24 15 198.51.100.77
+
+different top ip counts, but still the same top ip after unifying counts
+
+Top targeted usernames  39 admin 35 root 18 guest 13 test 13 backup 5 oracle 1 invalid
+when the invalid username was tried, after the word "For" which awk was sorting for, it states it is an Inavlid user before printing the name postgres
+
+non useful info as it targets the wrong values, fields and sorting locations(awk), modify or make a script specific to its formatting
+
+the attacks were on different ports and only certain ports were blocked, also the firewall blocks might have been added after the attacks 
