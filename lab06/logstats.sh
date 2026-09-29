@@ -40,6 +40,7 @@ if [ -n "$KEYWORD" ]; then
     echo "Error code: $GREP_ERROR"
 if [ "$MATCH_COUNT" -eq 0 ]; then
     echo "No matches"
+exit $GREP_ERROR
 else    
     echo "Lines containing '$KEYWORD': $MATCH_COUNT"
 fi
