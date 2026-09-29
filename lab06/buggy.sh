@@ -5,4 +5,4 @@ if [ ! -f "$1" ]; then
 fi
 
 echo "Continuing anyway..."
-exit 0
+exit 1
